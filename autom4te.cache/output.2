@@ -653,6 +653,8 @@ BUNDLED_OSL_TRUE
 OSL_LIBS
 OSL_LDFLAGS
 OSL_CPPFLAGS
+SYSROOT_DEST_PATH_FALSE
+SYSROOT_DEST_PATH_TRUE
 NO_ISL_FALSE
 NO_ISL_TRUE
 BUNDLED_ISL_FALSE
@@ -13244,6 +13246,15 @@ else
 fi
 
 
+ if test $SYSROOT_DEST_PATH != ""; then
+  SYSROOT_DEST_PATH_TRUE=
+  SYSROOT_DEST_PATH_FALSE='#'
+else
+  SYSROOT_DEST_PATH_TRUE='#'
+  SYSROOT_DEST_PATH_FALSE=
+fi
+
+
 
 
 
@@ -13789,6 +13800,10 @@ Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${NO_ISL_TRUE}" && test -z "${NO_ISL_FALSE}"; then
   as_fn_error $? "conditional \"NO_ISL\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${SYSROOT_DEST_PATH_TRUE}" && test -z "${SYSROOT_DEST_PATH_FALSE}"; then
+  as_fn_error $? "conditional \"SYSROOT_DEST_PATH\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${BUNDLED_OSL_TRUE}" && test -z "${BUNDLED_OSL_FALSE}"; then

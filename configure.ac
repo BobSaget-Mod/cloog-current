@@ -168,6 +168,8 @@ esac
 AM_CONDITIONAL(BUNDLED_ISL, test $with_isl = bundled)
 AM_CONDITIONAL(NO_ISL, test $with_isl = no)
 
+AM_CONDITIONAL(SYSROOT_DEST_PATH, test $SYSROOT_DEST_PATH != "")
+
 
 dnl /**************************************************************************
 dnl  *                   Where is the OpenScop Library?                       *

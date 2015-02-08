@@ -43,7 +43,11 @@ endif
 
 if BUNDLED_OSL
     MAYBE_OSL = osl
+if SYSROOT_DEST_PATH
+    OSL_LA = $(SYSROOT_DEST_PATH)/usr/lib/libosl.la
+else
     OSL_LA = $(top_builddir)/osl/libosl.la
+endif
 endif
 
 AUTOMAKE_OPTIONS = subdir-objects
